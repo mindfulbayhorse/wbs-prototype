@@ -1,6 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleaningOldFiles = require("./src/cleaning-cached-files");
+const CleaningOldFiles = require("./src/js/cleaning-cached-files");
 
 module.exports = {
   mode: 'development',
