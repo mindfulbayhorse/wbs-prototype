@@ -1,0 +1,3 @@
+[submodule "src/calendar"]
+	path = src/calendar
+	url = git@github.com:mindfulbayhorse/calendar.git
