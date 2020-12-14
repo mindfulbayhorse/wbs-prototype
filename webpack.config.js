@@ -1,7 +1,6 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackGitHash = require('webpack-git-hash');
+const CleaningOldFiles = require("./src/cleaning-cached-files");
 
 module.exports = {
   mode: 'development',
@@ -10,28 +9,19 @@ module.exports = {
     vendor: ['bootstrap']
   },
   output: {
-    filename: '[name].[githash].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'public'),
   },
   optimization: {
     minimize: true,
-    minimizer: [new TerserPlugin({
-      terserOptions: {
-          output: {
-            comments: false
-          },
-        },
-        extractComments: false
-    })],
+    moduleIds: 'deterministic',
   },
   plugins: [
-      new WebpackGitHash({
-        cleanup: true
-      }),
       new MiniCssExtractPlugin({
-        filename: '[name].[chunkhash].css',
+        filename: '[name].[hash].css',
         chunkFilename: '[id].css',
       }),
+      new CleaningOldFiles()
       ],
   module: {
     rules: [
@@ -39,7 +29,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader, 
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader', // Run postcss actions
