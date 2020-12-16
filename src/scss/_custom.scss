@@ -1,6 +1,8 @@
-$link-color: #184915;
+$link-color: $font-emphasis-color;
 
 $top_height: 55px;
 $text_color: #707070;
+$h1-font-size: 20px;
+$h3-font-size: 14px;
 
 @import "~bootstrap/scss/bootstrap";
