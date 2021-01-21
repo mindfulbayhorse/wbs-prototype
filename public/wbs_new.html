@@ -4,21 +4,30 @@
   <title>Project WBS</title>
 </head>
 <body>
-  <div class="shortcut">
+  <div class="tagline px-5 d-flex border-bottom align-items-center justify-content-between">
     <div>LOGOTYPE</div>
     <div>Tagline</div>
   </div>
-  <div class="mx-5">
-    <nav aria-label="breadcrumb">
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Projects</a></li>
-        <li class="breadcrumb-item"><a href="#">Beadshine</a></li>
-        <li class="breadcrumb-item active" aria-current="page">WBS</li>
-      </ul>
-    </nav>
+  <div class="px-5">
+    <div class="dashboard d-flex justify-content-between align-items-center border-bottom">
+        
+        <nav class="w-25">
+          <a href="#" class="btn btn-secondary d-inline">Home</a>
+        </nav>
+        
+        <div class="project w-75 py-2">
+          <h2 class="">Beadshine</h2>
+          <div class="summary d-flex justify-content-between align-items-start">
+            <p class="d-flex justify-content-between"><span>Start date</span>1 January 2021</p>
+              <p class="d-flex justify-content-between"><span>Finish date</span>31 January 2028</p>
+              <p class="d-flex justify-content-between"><span>Total cost</span>150000$</p>
+              <nav><a href="#" class="btn btn-secondary open">Open project</a></nav>
+          </div>
+          
+        </div>
+      </div>
       <div class="d-flex justify-content-between w-100">
-        <div class="left_side">
+        <div class="side_left">
         
           <div class="deliverbale new">
             <h3>New deliverable</h3>
@@ -123,30 +132,9 @@
                 </div> 
             </form>
         </div>
-
-          <h2 class="d-none">WBS</h2>
-          <div class="wbs_structure d-none">
-            <nav>
-              <ul>
-                <li><a href="">Prototype</a></li>
-                <li><a href="">Web-based prototypes</a></li>
-                <li><a href="">Back-end realization</a></li>
-                <li class="active">Front-end realization</li>
-              </ul>
-            </nav>
-          </div>
           
         </div>
-        <div class="right_side">
-           
-          <div class="project_summary">
-            <h2 class="">Beadshine</h2>
-            <div class="d-flex justify-content-between">
-              <p><span>Start date</span>1 January 2021</p>
-              <p><span>Finish date</span>31 January 2028</p>
-              <p><span>Total cost</span>150000$</p>
-            </div>
-          </div>
+        <div class="side_right">
           
           <h1 class="float-start">Work breakdown structure</h1>
         </div>

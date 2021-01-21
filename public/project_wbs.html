@@ -4,46 +4,57 @@
   <title>Project WBS</title>
 </head>
 <body>
-  <div class="shortcut">
+  <div class="tagline px-5 d-flex border-bottom align-items-center justify-content-between">
     <div>LOGOTYPE</div>
     <div>Tagline</div>
   </div>
-  <div class="mx-5">
-    <nav aria-label="breadcrumb" class="top_breadcrumbs">
-      <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Projects</a></li>
-        <li class="breadcrumb-item"><a href="#">Beadshine</a></li>
-        <li class="breadcrumb-item active" aria-current="page">WBS</li>
-      </ul>
-    </nav>
-      <div class="d-flex justify-content-between w-100 wbs">
-        <div class="left_side">
-          <a href="project_wbs_new.html" 
-            class="btn btn-secondary text-nowrap new">Add new deliverable</a>
-          
-          <div class="project_summary">
-            <h2 class="">Beadshine</h2>
-            <div>
-              <p class="d-flex justify-content-between"><span>Start date</span>1 January 2021</p>
+  <div class="px-5">
+
+    <div class="dashboard d-flex justify-content-between align-items-center border-bottom">
+        
+        <nav class="w-25">
+          <a href="#" class="btn btn-secondary d-inline">Home</a>
+        </nav>
+        
+        <div class="project w-75 py-2">
+          <h2 class="">Beadshine</h2>
+          <div class="summary d-flex justify-content-between align-items-start">
+            <p class="d-flex justify-content-between"><span>Start date</span>1 January 2021</p>
               <p class="d-flex justify-content-between"><span>Finish date</span>31 January 2028</p>
               <p class="d-flex justify-content-between"><span>Total cost</span>150000$</p>
-            </div>
-            
-          </div>
-          <div class="wbs_structure d-none">
-            <nav>
-              <ul>
-                <li><a href="">Prototype</a></li>
-                <li><a href="">Web-based prototypes</a></li>
-                <li><a href="">Back-end realization</a></li>
-                <li class="active">Front-end realization</li>
-              </ul>
-            </nav>
+              <nav><a href="#" class="btn btn-secondary open">Open project</a></nav>
           </div>
           
         </div>
-        <div class="right_side">
+    </div>
+      <div class="d-flex justify-content-between w-100 wbs side">
+        <div class="side_left">
+        
+          <a href="wbs_new.html" 
+            class="btn btn-secondary text-nowrap new mb-4">Add new deliverable</a>            
+
+          <div class="deliverable summary border">
+            <h3>Front-end realization</h3>
+            <div class="indicator d-flex justify-content-between pb-2">
+              <span class="title">Start date</span><span>18 January 2021</span>
+            </div>
+            <div class="indicator d-flex justify-content-between pb-2">
+              <span class="title">Finish date</span><span>30 May 2021</span>
+            </div>
+            <div class="indicator d-flex justify-content-between pb-2">
+              <span class="title">Total cost</span><span>3000 $</span>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+              <a href="wbs_new.html" 
+                class="btn btn-primary">Edit</a> 
+            
+                <a href="wbs_new.html" 
+                    class="btn btn-secondary">Break down</a> 
+            </div>
+          </div>
+          
+        </div>
+        <div class="side_center">
             <h1 class="float-start">Work breakdown structure</h1>
             
             <table class="table">
@@ -59,8 +70,8 @@
                 <tr>
                   <th scope="row">1</th>
                   <td><a href="#">Content architecture</a></td>
-                  <td>12.12.2020</td>
-                  <td>30.12.2021</td>
+                  <td>12 September 2021</td>
+                  <td>30 September 2021</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
@@ -78,9 +89,15 @@
                   <td colspan="2"><a href="deliverable_breakdown.html">Front-end realization</a></td>
                   <td>30.11.2020</td>
                 </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td colspan="2"><a href="#">Design for different devices</a></td>
+                  <td>30.11.2020</td>
+                </tr>
               </tbody>
             </table>
         </div>
+        <div class="side_bar_right"></div>
     </div>
   </div>
   
