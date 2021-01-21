@@ -1,0 +1,28 @@
+@use "../scss/custom"
+@use "theme"
+
+@mixin active-link 
+  color: custom.$link-color
+  font-weight: bold
+  text-decoration: none
+  
+nav 
+  a
+    display: block
+    width: 100%
+
+  li
+    list-style-type: none
+
+    &.active
+     @include active-link
+     
+h2
+  color: theme.$summary-text-color
+  font-size: 20px
+  font-weight: 500
+
+h3
+  color: theme.$current-text-color
+  font-size: 16px
+  font-weight: 700

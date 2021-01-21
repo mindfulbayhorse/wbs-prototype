@@ -1,44 +1,27 @@
-@import "theme"
-@import "../scss/custom"
-@import "form"
-@import "wbs"
+@use "theme"
+@use "wbs"
+@use "form"
+@use "header"
+@use "navigation"
+@use "project"
 
-@mixin active-link 
-  color: $link-color
-  font-weight: bold
-  text-decoration: none
+p, span, h1, h2, h3, h4, h5 
+  cursor: default
 
-.shortcut
-    height: $top_height
-    display: flex
-    justify-content: space-between
+.side
+  padding-top: 20px
 
-.left_side
-  width: 25%
-  margin: 0px
-
-.right_side
-  margin: 0px 3% 0px 2%
-  width: 70%
-
-  nav 
-    a
-      display: block
-      width: 100%
-
-    li
-      list-style-type: none
-
-      &.active
-       @include active-link
-
-h2
-  color: $text_color
-  font-size: 20px
-
-h3
-  color: $font-emphasis-color
+  &_left
+    width: 25%
+    margin: 0px
   
-.deliverable
-  margin: 0px
+  &_right
+    margin: 0px 3% 0px 2%
+    width: 70%
+    
+  &_bar_right
+    width: 20%
   
+  &_center
+    width: 50%
+    

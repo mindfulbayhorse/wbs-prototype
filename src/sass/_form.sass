@@ -1,3 +1,5 @@
+@use "theme"
+
 .full_date
   .day
     width: 45px
@@ -10,6 +12,6 @@
   border: 1px solid  $color
   color: $color
   font-weight: $font-weight
-
+  
 form input[type="submit"], form button[type="submit"]
-  @include submit-btn($submit-btn-color, $submit-btn-font-weight)
+  @include submit-btn(theme.$submit-btn-color, theme.$submit-btn-font-weight)

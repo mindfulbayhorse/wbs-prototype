@@ -1,12 +1,23 @@
-$font-emphasis-color: rgba(24, 73, 21)
+@import "../scss/custom"
+@import "~bootstrap/scss/bootstrap"
 
 $submit-btn-color: #173D26!default
 $submit-btn-font-weight: 500!default
+
+$summary-text-color: rgba(196,41,41,1)
+$current-text-color: rgba(224,31,31,1)
+
+$title-emphasis-color: rgba(24, 73, 21)
+
+$top_height: 40px !default
   
-@mixin btn-simple
+.btn-simple
   color: #173D26
   border: 1px solid #173D26
   font-weight: 500
+
+.btn-secondary, .btn-primary
+  @extend .btn-simple
   
 .top_breadcrumbs
   padding: 0px 0px 15px
