@@ -1,11 +1,13 @@
-$link-color: $font-emphasis-color;
+$link-color: rgba(24, 73, 21);
 
 $top_height: 55px;
 $text_color: #707070;
 $h1-font-size: 20px;
-$h3-font-size: 14px;
+$h2-font-size: 20px;
+$h3-font-size: 18px;
 
 $secondary: #caad5c;
 $primary: #5CCA96;
 
-@import "~bootstrap/scss/bootstrap";
+
+$headings-font-weight:  700;
