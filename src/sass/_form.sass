@@ -1,13 +1,28 @@
 @use "theme"
 
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
 .full_date
+  label 
+    @extend .visuallyhidden
   .day
-    width: 45px
+    input
+      width: 45px
   .year
-    width: 70px 
+    input
+      width: 70px
   .month
-    width: 130px
-  
+    input
+      width: 130px
+
 @mixin submit-btn($color, $font-weight)
   border: 1px solid  $color
   color: $color
