@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Project WBS</title>
+  <meta charset="utf-8"/>
 </head>
 <body>
   <div class="tagline px-5 d-flex border-bottom align-items-center justify-content-between">
@@ -18,22 +19,23 @@
         <div class="project w-75 py-2">
           <h2 class="">Beadshine</h2>
           <div class="summary d-flex justify-content-between align-items-start">
-            <p class="d-flex justify-content-between"><span>Start date</span>1 January 2021</p>
-              <p class="d-flex justify-content-between"><span>Finish date</span>31 January 2028</p>
-              <p class="d-flex justify-content-between"><span>Total cost</span>150000$</p>
-              <nav><a href="#" class="btn btn-secondary open">Open project</a></nav>
+              <p class="flex-fill me-5 d-flex align-items-end"><span class="me-3 label">Start date:</span>1 January 2021</p>
+              <p class="flex-fill me-5 d-flex align-items-end"><span class="me-3 label">Finish date:</span>31 January 2028</p>
+              <p class="flex-fill me-5 d-flex align-items-end"><span class="me-3 label">Total cost:</span>150000$</p>
+              <nav class="flex-fill"><a href="#" class="btn btn-secondary open">Open project</a></nav>
           </div>
           
         </div>
       </div>
-      <div class="d-flex justify-content-between w-100">
-        <div class="side_left">
+      <div class="pt-3 d-flex justify-content-between w-100">
+        <div class="part_left">
         
-          <div class="deliverbale new">
+          <main class="deliverbale new">
             <h3>New deliverable</h3>
         
             <form class="border deliverable p-3 pb-4 me-3"
-              action="project_wbs.html">
+                action="project_wbs.html">
+                
                 <div class="mb-3">
                     <label for="title" 
                         class="form-label">Title</label>
@@ -43,43 +45,26 @@
                 </div>
                 
                 <div class="full_date mb-3">
-                    <label for="startDate" 
-                        class="form-label">Start date</label>
-                
-                    <div class="field d-flex align-items-end justify-content-between">
-                        <input type="text" 
-                            class="form-control me-3 day" 
-                            id="startDate"
-                            maxlength="2">
-                        <select class="form-select me-3 month">
-                          <option selected value="0">January</option>
-                          <option value="1">February</option>
-                          <option value="2">March</option>
-                          <option value="3">April</option>
-                          <option value="4">May</option>
-                          <option value="5">June</option>
-                          <option value="6">July</option>
-                          <option value="7">August</option>
-                          <option value="8">September</option>
-                          <option value="9">October</option>
-                          <option value="10">November</option>
-                          <option value="11">December</option>
-                        </select>
-                        <input type="text" 
-                            class="form-control year"
-                            maxlength="4">
+    
+                    <p class="form-label"
+                      id="startDate">Start date
+                      </p>
+                    
+                    <div class="d-flex align-items-end justify-content-between">
+                        <div class="day">
+                            <label for="dayStartDate">Day</label>
+                            <input type="text" 
+                                class="form-control me-3" 
+                                aria-labelledby="startDate"
+                                id="dayStartDate"
+                                maxlength="2">
                         </div>
-                    </div>
-                <div class="full_date mb-3">
-                    <div class="field">
-                      <label for="finishDate" 
-                        class="form-label">Finish date</label>
-                      <div class="field d-flex align-items-end justify-content-between">
-                          <input type="text" 
-                            class="form-control me-3 day" 
-                            id="startDate"
-                            maxlength="2">
-                          <select class="form-select me-3 month">
+                  
+                        <div class="month">
+                            <label for="monthStartDate">Month</label>
+                            <select class="form-select me-3 month"
+                                  aria-labelledby="startDate"
+                                  id="monthStartDate">
                               <option selected value="0">January</option>
                               <option value="1">February</option>
                               <option value="2">March</option>
@@ -92,11 +77,67 @@
                               <option value="9">October</option>
                               <option value="10">November</option>
                               <option value="11">December</option>
-                        </select>
-                        <input type="text" 
-                            class="form-control year"
-                            maxlength="4">
-                      </div>
+                            </select>
+                        </div>
+                        
+                        <div class="year">
+                            <label for="yearStartDate">Year</label>
+                            <input type="text" 
+                                class="form-control"
+                                maxlength="4"
+                                id="yearStartDate"
+                                aria-labelledby="startDate"
+                                value="2021">
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="full_date mb-3">    
+                    <p class="form-label"
+                      id="finishDate">Finish date
+                      </p>
+                    
+                    <div class="d-flex align-items-end justify-content-between">
+                        <div class="day">
+                            <label for="dayFinishDate">Day</label>
+                            <input type="text" 
+                                class="form-control me-3" 
+                                aria-labelledby="finishDate"
+                                id="dayFinishDate"
+                                maxlength="2">
+                        </div>
+                  
+                        <div class="month">
+                            <label for="monthFinishDate">Month</label>
+                            <select class="form-select me-3 month"
+                                  aria-labelledby="finishDate"
+                                  id="monthFinishDate">
+                              <option selected value="0">January</option>
+                              <option value="1">February</option>
+                              <option value="2">March</option>
+                              <option value="3">April</option>
+                              <option value="4">May</option>
+                              <option value="5">June</option>
+                              <option value="6">July</option>
+                              <option value="7">August</option>
+                              <option value="8">September</option>
+                              <option value="9">October</option>
+                              <option value="10">November</option>
+                              <option value="11">December</option>
+                            </select>
+                        </div>
+                        
+                        <div class="year">
+                            <label for="yearFinishDate">Year</label>
+                            <input type="text" 
+                                class="form-control"
+                                maxlength="4"
+                                id="yearFinishDate"
+                                aria-labelledby="finishDate"
+                                value="2021">
+                        </div>
+                        
                     </div>
                 </div>
                 
@@ -112,18 +153,18 @@
                   <div class="form-check mb-3">
                     <input type="checkbox" 
                       class="form-check-input" 
-                      id="finishDate">
+                      id="isPackage">
                     <label 
                       class="form-check-label" 
-                      for="finishDate">Package</label>
+                      for="isPackage">Package</label>
                   </div>
                   <div class="form-check mb-3">
                     <input type="checkbox" 
                       class="form-check-input" 
-                      id="finishDate">
+                      id="isMilestone">
                     <label 
                       class="form-check-label" 
-                      for="finishDate">Milestone</label>
+                      for="isMilestone">Milestone</label>
                   </div>
                 </div>
                     
@@ -131,10 +172,9 @@
                   <button type="submit" class="btn btn-primary w-75">Add</button>
                 </div> 
             </form>
+          </main>
         </div>
-          
-        </div>
-        <div class="side_right">
+        <div class="part_right">
           
           <h1 class="float-start">Work breakdown structure</h1>
         </div>
