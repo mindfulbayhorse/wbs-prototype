@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project WBS</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <div class="full_date mb-3">
+    
+        <p class="form-label"
+          id="startDate">Start date
+          </p>
+        
+        <div class="d-flex align-items-end justify-content-between">
+            <div class="day">
+                <label for="dayStartDate">Day</label>
+                <input type="text" 
+                    class="form-control me-3" 
+                    aria-labelledby="startDate"
+                    id="dayStartDate"
+                    maxlength="2">
+            </div>
+      
+            <div class="month">
+                <label for="monthStartDate">Month</label>
+                <select class="form-select me-3 month"
+                      aria-labelledby="startDate"
+                      id="monthStartDate">
+                  <option selected value="0">January</option>
+                  <option value="1">February</option>
+                  <option value="2">March</option>
+                  <option value="3">April</option>
+                  <option value="4">May</option>
+                  <option value="5">June</option>
+                  <option value="6">July</option>
+                  <option value="7">August</option>
+                  <option value="8">September</option>
+                  <option value="9">October</option>
+                  <option value="10">November</option>
+                  <option value="11">December</option>
+                </select>
+            </div>
+            
+            <div class="year">
+                <label for="yearStartDate">Year</label>
+                <input type="text" 
+                    class="form-control"
+                    maxlength="4"
+                    id="yearStartDate"
+                    aria-labelledby="startDate"
+                    value="2021">
+            </div>
+            
+        </div>
+    </div>
+<script src="AJAXHTTP.js"></script>
+</body>
+</html>

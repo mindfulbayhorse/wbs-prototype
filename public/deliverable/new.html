@@ -3,6 +3,9 @@
 <head>
   <title>Project WBS</title>
   <meta charset="utf-8"/>
+  <!--[if IE ]>
+      <link href="css/iecss.css" rel="stylesheet" type="text/css">
+  <![endif]-->
 </head>
 <body>
 <div class="deliverbale new">
@@ -11,68 +14,43 @@
     <form class="border deliverable p-3 pb-4 me-3">
         <div class="mb-3">
             <label for="title" 
-                class="form-label">Title</label>
+                class="form-label">Title <span class="req">*<span>(required)</span></span></label>
             <input type="email" 
                 class="form-control" 
-                id="title">
+                id="title"
+                required aria-required="true">
         </div>
         
-        <div class="full_date mb-3">
-            <label for="startDate" 
-                class="form-label">Start date</label>
+        <div class="mb-3">
+            <label for="startDate"
+              id="startDateLabel"
+              tabindex="-1">End date <span class="req">*<span>(required)</span></span></label>
+            <span>
+                <input type="date" 
+                    class="form-control me-3"
+                    id="startDate"
+                    required aria-required="true"
+                    aria-labelledby="startDateLabel startDateFormat">
+                <span class="visually-hidden" 
+                  id="startDateFormat" 
+                  tabindex="-1">DD/MM/YYYY</span>
+            </span>
+        </div>
         
-            <div class="field d-flex align-items-end justify-content-between">
-                <input type="text" 
-                    class="form-control me-3 day" 
-                    id="startDate"
-                    maxlength="2">
-                <select class="form-select me-3 month">
-                  <option selected value="0">January</option>
-                  <option value="1">February</option>
-                  <option value="2">March</option>
-                  <option value="3">April</option>
-                  <option value="4">May</option>
-                  <option value="5">June</option>
-                  <option value="6">July</option>
-                  <option value="7">August</option>
-                  <option value="8">September</option>
-                  <option value="9">October</option>
-                  <option value="10">November</option>
-                  <option value="11">December</option>
-                </select>
-                <input type="text" 
-                    class="form-control year"
-                    maxlength="4">
-                </div>
-            </div>
-        <div class="full_date mb-3">
-            <div class="field">
-              <label for="finishDate" 
-                class="form-label">Finish date</label>
-              <div class="field d-flex align-items-end justify-content-between">
-                  <input type="text" 
-                    class="form-control me-3 day" 
-                    id="startDate"
-                    maxlength="2">
-                  <select class="form-select me-3 month">
-                      <option selected value="0">January</option>
-                      <option value="1">February</option>
-                      <option value="2">March</option>
-                      <option value="3">April</option>
-                      <option value="4">May</option>
-                      <option value="5">June</option>
-                      <option value="6">July</option>
-                      <option value="7">August</option>
-                      <option value="8">September</option>
-                      <option value="9">October</option>
-                      <option value="10">November</option>
-                      <option value="11">December</option>
-                </select>
-                <input type="text" 
-                    class="form-control year"
-                    maxlength="4">
-              </div>
-            </div>
+        <div class="mb-3">
+            <label for="endDate"
+              id="endDateLabel"
+              tabindex="-1">Start date <span class="req">*<span>(required)</span></span></label>
+            <span>
+                <input type="date" 
+                    class="form-control me-3"
+                    id="endDate"
+                    required aria-required="true"
+                    aria-labelledby="endDateLabel endDateFormat">
+                <span class="visually-hidden" 
+                  id="endDateFormat" 
+                  tabindex="-1">DD/MM/YYYY</span>
+            </span>
         </div>
         
         <div class="field mb-3 w-50">
@@ -84,22 +62,25 @@
         </div>
         
         <div class="d-flex justify-content-between h-50 align-items-end mb-3">
+          
           <div class="form-check mb-3">
             <input type="checkbox" 
               class="form-check-input" 
-              id="finishDate">
+              id="isMilestone">
             <label 
               class="form-check-label" 
-              for="finishDate">Package</label>
+              for="isMilestone">Milestone</label>
           </div>
+          
           <div class="form-check mb-3">
             <input type="checkbox" 
               class="form-check-input" 
-              id="finishDate">
+              id="isPackage">
             <label 
               class="form-check-label" 
-              for="finishDate">Milestone</label>
+              for="isPackage">Package</label>
           </div>
+          
         </div>
             
         <div>
@@ -107,6 +88,6 @@
         </div> 
     </form>
 </div>
-<script src="../AJAXHTTP.js"></script>
+<script src="AJAXHTTP.js"></script>
 </body>
 </html>
