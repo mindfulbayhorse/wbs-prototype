@@ -5,236 +5,63 @@
   <meta charset="utf-8"/>
 </head>
 <body>
-  <div class="shortcut">
+  <div class="tagline px-5 d-flex border-bottom align-items-center justify-content-between">
     <div>LOGOTYPE</div>
     <div>Tagline</div>
   </div>
   <div class="px-5">
-     <nav aria-label="breadcrumb">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Projects</a></li>
-            <li class="breadcrumb-item"><a href="#">Beadshine</a></li>
-            <li class="breadcrumb-item"><a href="project_wbs.html">WBS</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Front-end realization</li>
-          </ul>
-      </nav>
-        
-      <div class="d-flex justify-content-start">
-        <div class="left_side">
-         <div class="deliverbale new">
-                <h3>New deliverable</h3>
-            
-                <form class="border deliverable p-3 pb-4 me-3">
-                    <div class="mb-3">
-                        <label for="title" 
-                            class="form-label">Title</label>
-                        <input type="email" 
-                            class="form-control" 
-                            id="title">
-                    </div>
-                    
-                    <div class="full_date mb-3">
-                        <label for="startDate" 
-                            class="form-label">Start date</label>
-                    
-                        <div class="field d-flex align-items-end justify-content-between">
-                            <input type="text" 
-                                class="form-control me-3 day" 
-                                id="startDate"
-                                maxlength="2">
-                            <select class="form-select me-3 month">
-                              <option selected value="0">January</option>
-                              <option value="1">February</option>
-                              <option value="2">March</option>
-                              <option value="3">April</option>
-                              <option value="4">May</option>
-                              <option value="5">June</option>
-                              <option value="6">July</option>
-                              <option value="7">August</option>
-                              <option value="8">September</option>
-                              <option value="9">October</option>
-                              <option value="10">November</option>
-                              <option value="11">December</option>
-                            </select>
-                            <input type="text" 
-                                class="form-control year"
-                                maxlength="4">
-                            </div>
-                        </div>
-                    <div class="full_date mb-3">
-                    <div class="field">
-                      <label for="finishDate" 
-                        class="form-label">Finish date</label>
-                      <div class="field d-flex align-items-end justify-content-between">
-                          <input type="text" 
-                            class="form-control me-3 day" 
-                            id="startDate"
-                            maxlength="2">
-                          <select class="form-select me-3 month">
-                              <option selected value="0">January</option>
-                              <option value="1">February</option>
-                              <option value="2">March</option>
-                              <option value="3">April</option>
-                              <option value="4">May</option>
-                              <option value="5">June</option>
-                              <option value="6">July</option>
-                              <option value="7">August</option>
-                              <option value="8">September</option>
-                              <option value="9">October</option>
-                              <option value="10">November</option>
-                              <option value="11">December</option>
-                          </select>
-                        <input type="text" 
-                            class="form-control year"
-                            maxlength="4">
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <div class="field mb-3 w-50">
-                      <label for="cost" 
-                        class="form-label">Cost</label>
-                      <input type="text" 
-                        class="form-control" 
-                        id="cost">
-                    </div>
-                    
-                    <div class="d-flex justify-content-between h-50 align-items-end mb-3">
-                      <div class="form-check mb-3">
-                        <input type="checkbox" 
-                          class="form-check-input" 
-                          id="finishDate">
-                        <label 
-                          class="form-check-label" 
-                          for="finishDate">Package</label>
-                      </div>
-                      <div class="form-check mb-3">
-                        <input type="checkbox" 
-                          class="form-check-input" 
-                          id="finishDate">
-                        <label 
-                          class="form-check-label" 
-                          for="finishDate">Milestone</label>
-                      </div>
-                    </div>
-                        
-                    <div>
-                      <button type="submit" class="btn btn-primary w-75">Add</button>
-                    </div> 
-                </form>
-            </div>
-        </div>
-        <div class="right_side">
-            <div class="project_summary">
-                <h2>Beadshine</h2>
-                <div class="d-flex justify-content-between">
-                  <p><span>Start date</span>1 January 2021</p>
-                  <p><span>Finish date</span>31 January 2028</p>
-                  <p><span>Total cost</span>150000$</p>
-                </div>
-              </div>
-            <form class="row g-0 border deliverable p-3 pb-4 d-none">
-              <div class="col-6 pe-4">
-                 <div class="mb-3">
-                    <label for="title" 
-                        class="form-label">Title</label>
-                    <input type="email" 
-                        class="form-control" 
-                        id="title">
-                  </div>
-                  <div class="d-flex h-50 justify-content-between align-items-end">
-                    <div class="field w-25">
-                      <label for="cost" 
-                        class="form-label">Cost</label>
-                      <input type="text" 
-                        class="form-control" 
-                        id="cost">
-                    </div>
-                    <div class="form-check mb-3">
-                        <input type="checkbox" 
-                          class="form-check-input" 
-                          id="finishDate">
-                        <label 
-                          class="form-check-label" 
-                          for="finishDate">Package</label>
-                    </div>
-                    <div class="form-check mb-3">
-                        <input type="checkbox" 
-                          class="form-check-input" 
-                          id="finishDate">
-                        <label 
-                          class="form-check-label" 
-                          for="finishDate">Milestone</label>
-                      </div>
-                </div>
-              </div>
-              <div class="col-4 pe-4">
-                <div class="field full_date h-50">
-                    <label for="startDate" 
-                      class="form-label">Start date</label>
-                    
-                    <div class="d-flex align-items-end justify-content-between">
-                      <input type="text" 
-                            class="form-control me-3 day" 
-                            id="startDate"
-                            maxlength="2" />
-                        <select class="form-select me-3 month">
-                          <option selected value="0">January</option>
-                          <option value="1">February</option>
-                          <option value="2">March</option>
-                          <option value="3">April</option>
-                          <option value="4">May</option>
-                          <option value="5">June</option>
-                          <option value="6">July</option>
-                          <option value="7">August</option>
-                          <option value="8">September</option>
-                          <option value="9">October</option>
-                          <option value="10">November</option>
-                          <option value="11">December</option>
-                        </select>
-                        <input type="text" 
-                            class="form-control year"
-                            maxlength="4">
-                    </div>
-                </div>
 
-                <div class="field full_date h-50">
-                  <label for="finishDate" 
-                    class="form-label">Finish date</label>                      
-                    
-                    <div class="d-flex align-items-end justify-content-between">
-                      <input type="text" 
-                            class="form-control me-3 day" 
-                            id="startDate"
-                            maxlength="2" />
-                        <select class="form-select me-3 month">
-                          <option selected value="0">January</option>
-                          <option value="1">February</option>
-                          <option value="2">March</option>
-                          <option value="3">April</option>
-                          <option value="4">May</option>
-                          <option value="5">June</option>
-                          <option value="6">July</option>
-                          <option value="7">August</option>
-                          <option value="8">September</option>
-                          <option value="9">October</option>
-                          <option value="10">November</option>
-                          <option value="11">December</option>
-                        </select>
-                        <input type="text" 
-                            class="form-control year"
-                            maxlength="4">
-                    </div>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="h-100 d-flex align-items-end justify-content-end">
-                  <button type="submit" class="btn btn-primary w-75">Save</button>
-                </div> 
-              </div>
-            </form>
-            <h1>Work breakdown structure</h1>
+    <div class="dashboard d-flex justify-content-between align-items-center border-bottom">
+        
+        <nav class="w-25">
+          <a href="#" class="btn btn-secondary d-inline">Home</a>
+        </nav>
+        
+        <div class="project w-75 py-2">
+          <div class="summary d-flex justify-content-between align-items-center">
+              <h3 class="flex-fill me-5 mb-0">Beadshine</h3>
+              <p class="flex-fill me-5 mb-0 d-flex align-items-end"><span class="me-3 label">Start date:</span>1 January 2021</p>
+              <p class="flex-fill me-5 mb-0 d-flex align-items-end"><span class="me-3 label">Finish date:</span>31 January 2028</p>
+              <p class="flex-fill me-5 mb-0 d-flex align-items-end"><span class="me-3 label">Total cost:</span>150000$</p>
+              <nav class="flex-fill"><a href="#" class="btn btn-secondary open">Open project</a></nav>
+          </div>
+          
+        </div>
+    </div>
+  
+       <div class="pt-3 d-flex justify-content-between w-100">
+       
+        <div class="part_left">
+        
+          <a href="wbs_new.html" 
+            class="btn btn-secondary text-nowrap new mb-4">Add new deliverable</a>            
+    
+          <div class="deliverable summary border">
+            <h3>Front-end realization</h3>
+            <div class="indicator d-flex justify-content-between pb-2">
+              <span class="title">Start date</span><span>18 January 2021</span>
+            </div>
+            <div class="indicator d-flex justify-content-between pb-2">
+              <span class="title">Finish date</span><span>30 May 2021</span>
+            </div>
+            <div class="indicator d-flex justify-content-between pb-2">
+              <span class="title">Total cost</span><span>3000 $</span>
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+              <a href="wbs_new.html" 
+                class="btn btn-primary">Edit</a> 
+            
+                <a href="wbs_new.html" 
+                    class="btn btn-secondary">Break down</a> 
+            </div>
+          </div>
+              
+        </div>
+            
+        <main class="part_right">
+        
+            <h1 class="float-start">Work breakdown structure</h1>
+            
             <table class="table">
               <thead>
                 <tr>
@@ -247,28 +74,38 @@
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td><a href="#">Side quick access blocks</a></td>
-                  <td>12.12.2020</td>
-                  <td>30.12.2021</td>
+                  <td><a href="#">Content architecture</a></td>
+                  <td>12 September 2021</td>
+                  <td>30 September 2021</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
-                  <td><a href="#">Banners slider</a></td>
+                  <td><a href="#">Navigation</a></td>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
-                  <td colspan="2"><a href="#">Form submittion</a></td>
+                  <td colspan="2"><a href="#">Design</a></td>
+                  <td>30.11.2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td colspan="2"><a href="deliverable_breakdown.html">Front-end realization</a></td>
+                  <td>30.11.2020</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td colspan="2"><a href="#">Design for different devices</a></td>
                   <td>30.11.2020</td>
                 </tr>
               </tbody>
             </table>
+            
+          </main>
         </div>
-      </div>
-
-  </div>
- 
+      
+    </div>
   <script src="AJAXHTTP.js"></script>
 </body>
 </html>
