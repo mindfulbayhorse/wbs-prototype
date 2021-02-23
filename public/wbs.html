@@ -33,9 +33,18 @@
        
         <div class="part_left">
         
-          <a href="wbs_new.html" 
+          <a href="deliverable.new.html" 
             class="btn btn-secondary text-nowrap new mb-4">Add new deliverable</a>            
     
+          <div class="history border p-3 mb-3">
+            <h4>History</h4>
+            <p><a href="#">Content architecture</a> deliverable is created</p>
+            <p><a href="#">Content architecture</a> deliverable is created</p>
+            <div class="actions d-flex justify-content-end mt-4">
+              <button class="btn btn-secondary btn-sm me-3">Undo</button>
+              <button class="btn btn-secondary btn-sm">Redo</button>
+            </div>
+          </div>
           <div class="deliverable summary border">
             <h3>Front-end realization</h3>
             <div class="indicator d-flex justify-content-between pb-2">
@@ -62,42 +71,51 @@
         
             <h1 class="float-start">Work breakdown structure</h1>
             
-            <table class="table">
+            <table class="table border">
               <thead>
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Title</th>
-                  <th scope="col">Start date</th>
-                  <th scope="col">Finish date</th>
+                  <th scope="col">Start date (dd/mm/yy)</th>
+                  <th scope="col">Finish date (dd/mm/yy)</th>
+                  <th scope="col">Cost ($)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
                   <td><a href="#">Content architecture</a></td>
-                  <td>12 September 2021</td>
-                  <td>30 September 2021</td>
+                  <td>12/09/2021</td>
+                  <td>30/09/2021</td>
+                  <td>140 $</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td><a href="#">Navigation</a></td>
-                  <td></td>
-                  <td></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
+                  <td>60 $</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
-                  <td colspan="2"><a href="#">Design</a></td>
-                  <td>30.11.2020</td>
+                  <td><a href="#">Design</a></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
+                  <td>1300 $</td>
                 </tr>
                 <tr>
                   <th scope="row">4</th>
-                  <td colspan="2"><a href="deliverable_breakdown.html">Front-end realization</a></td>
-                  <td>30.11.2020</td>
+                  <td><a href="deliverable_breakdown.html">Front-end realization</a></td>
+                  <td>02/03/2021</td>
+                  <td>02/04/2021</td>
+                  <td>300 $</td>
                 </tr>
                 <tr>
                   <th scope="row">5</th>
-                  <td colspan="2"><a href="#">Design for different devices</a></td>
-                  <td>30.11.2020</td>
+                  <td><a href="#">Design for different devices</a></td>
+                  <td>18/03/2021</td>
+                  <td>18/04/2021</td>
+                  <td>500 $</td>
                 </tr>
               </tbody>
             </table>
