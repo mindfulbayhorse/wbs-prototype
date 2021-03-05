@@ -33,7 +33,9 @@
               <div class="deliverbale new">
                 <h2>New deliverable</h2>
 
-                <form class="me-3" action="wbs.html">
+                <form class="me-3" action="wbs.html" id="deliverbale_new">
+                    <fieldset>
+                    <legend>Basic information</legend>
                   <div class="border p-3 pb-4">
                     <div class="mb-3">
                         <label for="title" 
@@ -106,12 +108,134 @@
                   <div class="mt-3 d-flex justify-content-end">
                     <button type="submit" class="btn btn-primary w-50">Create</button>
                   </div> 
+                  </fieldset>
                 </form>
               </div>
             </div>
             <div class="part_right">
               <h1>Work breakdown structure</h1>
               <div class="text-info">There is no any deliverable yet</div>
+              <fieldset>
+                <legend>Arrange order</legend>
+                <div class="order_choice d-flex justify-content-start">
+                  <div class="form-check me-5">
+                      <input class="form-check-input" 
+                        form="deliverbale_new" 
+                        type="checkbox" 
+                        value="" 
+                        id="first">
+                      <label class="form-check-label" for="first">
+                        Insert first
+                      </label>
+                    </div>
+                    <div class="form-check me-5">
+                      <input class="form-check-input" 
+                        type="checkbox" 
+                        value="" 
+                        form="deliverbale_new" 
+                        id="last">
+                      <label class="form-check-label" for="last">
+                        Insert last
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input"
+                        form="deliverbale_new"  
+                        type="checkbox" 
+                        value="" 
+                        id="after" 
+                        checked>
+                      <label class="form-check-label" for="after">
+                        Insert next to
+                      </label>
+                    </div>
+                </div>
+              
+              </fieldset>
+              
+               <table class="table border">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">#</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Start date (dd/mm/yy)</th>
+                  <th scope="col">Finish date (dd/mm/yy)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="1" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <th scope="row">1</th>
+                  <td><a href="#">Content architecture</a></td>
+                  <td>12/09/2021</td>
+                  <td>30/09/2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="2" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <th scope="row">2</th>
+                  <td><a href="#">Navigation</a></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
+                </tr>
+                <tr>
+                 <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="3" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <th scope="row">3</th>
+                  <td><a href="#">Design</a></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
+                </tr>
+                <tr>
+                   <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="4" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <th scope="row">4</th>
+                  <td><a href="deliverable_breakdown.html">Front-end realization</a></td>
+                  <td>02/03/2021</td>
+                  <td>02/04/2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="3" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <th scope="row">5</th>
+                  <td><a href="#">Design for different devices</a></td>
+                  <td>18/03/2021</td>
+                  <td>18/04/2021</td>
+                </tr>
+              </tbody>
+            </table>
             </div>
         </main>
   </div>
