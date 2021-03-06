@@ -12,7 +12,7 @@
   <div class="px-5">
     <div class="dashboard d-flex justify-content-between align-items-center border-bottom">
         
-        <nav class="w-25">
+        <nav class="primary_menu w-25">
           <a href="#" class="btn btn-secondary d-inline">Home</a>
         </nav>
         
@@ -112,28 +112,20 @@
                 </form>
               </div>
             </div>
-            <div class="part_right">
-              <h1>Work breakdown structure</h1>
-              <div class="text-info">There is no any deliverable yet</div>
+            <div class="part_right wbs">
+              <nav class="d-flex justify-content-end w-100 return">
+                <a href="wbs.html" class="d-block">Work breakdown structure >></a>
+              </nav>
               <fieldset>
                 <legend>Arrange order</legend>
                 <div class="order_choice d-flex justify-content-start">
-                  <div class="form-check me-5">
-                      <input class="form-check-input" 
-                        form="deliverbale_new" 
-                        type="checkbox" 
-                        value="" 
-                        id="first">
-                      <label class="form-check-label" for="first">
-                        Insert first
-                      </label>
-                    </div>
                     <div class="form-check me-5">
                       <input class="form-check-input" 
-                        type="checkbox" 
+                        type="radio" 
                         value="" 
                         form="deliverbale_new" 
-                        id="last">
+                        id="last"
+                        name="order_choice" >
                       <label class="form-check-label" for="last">
                         Insert last
                       </label>
@@ -141,9 +133,10 @@
                     <div class="form-check">
                       <input class="form-check-input"
                         form="deliverbale_new"  
-                        type="checkbox" 
+                        type="radio" 
                         value="" 
-                        id="after" 
+                        id="after"
+                        name="order_choice" 
                         checked>
                       <label class="form-check-label" for="after">
                         Insert next to
@@ -151,91 +144,96 @@
                     </div>
                 </div>
               
+               <table class="table border mt-3">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Start date <small class="fw-normal">(dd/mm/yy)</small></th>
+                      <th scope="col">Finish date <small class="fw-normal">(dd/mm/yy)</small></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input class="form-check-input" 
+                            type="radio" 
+                            value="1" 
+                            aria-label="..."
+                            name="order"
+                            form="deliverbale_new" />
+                      </td>
+                      <td><a href="#">Content architecture</a></td>
+                      <td>12/09/2021</td>
+                      <td>30/09/2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="form-check-input" 
+                            type="radio" 
+                            value="2" 
+                            aria-label="..."
+                            name="order"
+                            form="deliverbale_new" />
+                      </td>
+                      <td><a href="#">Navigation</a></td>
+                      <td>12/02/2021</td>
+                      <td>12/03/2021</td>
+                    </tr>
+                    <tr>
+                     <td>
+                        <input class="form-check-input" 
+                            type="radio" 
+                            value="3" 
+                            aria-label="..."
+                            name="order"
+                            form="deliverbale_new" />
+                      </td>
+                      <td><a href="#">Design</a></td>
+                      <td>12/02/2021</td>
+                      <td>12/03/2021</td>
+                    </tr>
+                    <tr>
+                       <td>
+                        <input class="form-check-input" 
+                            type="radio" 
+                            value="4" 
+                            aria-label="..."
+                            name="order"
+                            form="deliverbale_new" />
+                      </td>
+                      <td><a href="deliverable_breakdown.html">Front-end realization</a></td>
+                      <td>02/03/2021</td>
+                      <td>02/04/2021</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input class="form-check-input" 
+                            type="radio" 
+                            value="3" 
+                            aria-label="..."
+                            name="order"
+                            form="deliverbale_new" />
+                      </td>
+                      <td><a href="#">Design for different devices</a></td>
+                      <td>18/03/2021</td>
+                      <td>18/04/2021</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <nav aria-label="Page navigation example" class="page_nav">
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">First</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Last</a></li>
+                  </ul>
+                </nav>
+                              
               </fieldset>
-              
-               <table class="table border">
-              <thead>
-                <tr>
-                  <th scope="col"></th>
-                  <th scope="col">#</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Start date (dd/mm/yy)</th>
-                  <th scope="col">Finish date (dd/mm/yy)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <input class="form-check-input" 
-                        type="radio" 
-                        value="1" 
-                        aria-label="..."
-                        name="order"
-                        form="deliverbale_new" />
-                  </td>
-                  <th scope="row">1</th>
-                  <td><a href="#">Content architecture</a></td>
-                  <td>12/09/2021</td>
-                  <td>30/09/2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class="form-check-input" 
-                        type="radio" 
-                        value="2" 
-                        aria-label="..."
-                        name="order"
-                        form="deliverbale_new" />
-                  </td>
-                  <th scope="row">2</th>
-                  <td><a href="#">Navigation</a></td>
-                  <td>12/02/2021</td>
-                  <td>12/03/2021</td>
-                </tr>
-                <tr>
-                 <td>
-                    <input class="form-check-input" 
-                        type="radio" 
-                        value="3" 
-                        aria-label="..."
-                        name="order"
-                        form="deliverbale_new" />
-                  </td>
-                  <th scope="row">3</th>
-                  <td><a href="#">Design</a></td>
-                  <td>12/02/2021</td>
-                  <td>12/03/2021</td>
-                </tr>
-                <tr>
-                   <td>
-                    <input class="form-check-input" 
-                        type="radio" 
-                        value="4" 
-                        aria-label="..."
-                        name="order"
-                        form="deliverbale_new" />
-                  </td>
-                  <th scope="row">4</th>
-                  <td><a href="deliverable_breakdown.html">Front-end realization</a></td>
-                  <td>02/03/2021</td>
-                  <td>02/04/2021</td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class="form-check-input" 
-                        type="radio" 
-                        value="3" 
-                        aria-label="..."
-                        name="order"
-                        form="deliverbale_new" />
-                  </td>
-                  <th scope="row">5</th>
-                  <td><a href="#">Design for different devices</a></td>
-                  <td>18/03/2021</td>
-                  <td>18/04/2021</td>
-                </tr>
-              </tbody>
-            </table>
             </div>
         </main>
   </div>
