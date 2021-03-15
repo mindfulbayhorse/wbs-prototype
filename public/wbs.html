@@ -32,45 +32,93 @@
        
         <div class="part_left">
         
-          <a href="deliverable.new.html" 
-            class="btn btn-secondary text-nowrap new mb-4">Add new deliverable</a>            
-    
-          <div class="history border p-3 mb-3">
-            <h4>History</h4>
-            <p><a href="#">Content architecture</a> deliverable is created</p>
-            <p><a href="#">Content architecture</a> deliverable is created</p>
-            <div class="actions d-flex justify-content-end mt-4">
-              <button class="btn btn-secondary btn-sm me-3">Undo</button>
-              <button class="btn btn-secondary btn-sm">Redo</button>
+          <div class="deliverbale new">
+            <form class="" action="wbs.html" id="deliverbale_new">
+                <fieldset>
+                <legend>New deliverable</legend>
+                  <div class="border p-3 pb-4">
+                    <div class="mb-3">
+                        <label for="title" 
+                            class="form-label">Title <span class="req">*<span>(required)</span></span></label>
+                        <input type="text" 
+                            class="form-control" 
+                            id="title"
+                            required aria-required="true">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="startDate"
+                          id="startDateLabel"
+                          tabindex="-1">End date</label>
+                        <span>
+                            <input type="date" 
+                                class="form-control me-3"
+                                id="startDate"
+                                required aria-required="true"
+                                aria-labelledby="startDateLabel startDateFormat">
+                            <span class="visually-hidden" 
+                              id="startDateFormat" 
+                              tabindex="-1">DD/MM/YYYY</span>
+                        </span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="endDate"
+                          id="endDateLabel"
+                          tabindex="-1">Start date</label>
+                        <span>
+                            <input type="date" 
+                                class="form-control me-3"
+                                id="endDate"
+                                required aria-required="true"
+                                aria-labelledby="endDateLabel endDateFormat">
+                            <span class="visually-hidden" 
+                              id="endDateFormat" 
+                              tabindex="-1">DD/MM/YYYY</span>
+                        </span>
+                    </div>
+                    
+                    <div class="field mb-3 w-50">
+                      <label for="cost" 
+                        class="form-label">Cost</label>
+                      <input type="text" 
+                        class="form-control" 
+                        id="cost">
+                    </div>
+                      
+                      <div class="form-check mb-3">
+                        <input type="checkbox" 
+                          class="form-check-input" 
+                          id="isMilestone">
+                        <label 
+                          class="form-check-label" 
+                          for="isMilestone">Milestone</label>
+                      </div>
+                      
+                      <div class="form-check">
+                        <input type="checkbox" 
+                          class="form-check-input" 
+                          id="isPackage">
+                        <label 
+                          class="form-check-label" 
+                          for="isPackage">Package</label>
+                      </div>
+                  </div>
+                  
+                  <div class="mt-3 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary w-50">Create</button>
+                  </div> 
+                  </fieldset>
+                </form>
             </div>
-          </div>
-          <div class="deliverable summary border">
-            <h3>Front-end realization</h3>
-            <div class="indicator d-flex justify-content-between pb-2">
-              <span class="title">Start date</span><span>18 January 2021</span>
-            </div>
-            <div class="indicator d-flex justify-content-between pb-2">
-              <span class="title">Finish date</span><span>30 May 2021</span>
-            </div>
-            <div class="indicator d-flex justify-content-between pb-2">
-              <span class="title">Total cost</span><span>3000 $</span>
-            </div>
-            <div class="d-flex justify-content-between pt-2 actions">
-              <a href="wbs_new.html" 
-                class="btn btn-primary">Edit</a> 
-            
-                <a href="wbs_new.html" 
-                    class="btn btn-secondary">Break down</a> 
-            </div>
-          </div>
-              
         </div>
             
-        <main class="part_right">
+        <main class="part_center">
         
             <h1 class="float-start">Work breakdown structure</h1>
             
             <table class="table border">
+              <caption class="visually-hidden">Work Breakdown structure</caption>
               <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -104,7 +152,7 @@
                 </tr>
                 <tr>
                   <th scope="row">4</th>
-                  <td><a href="deliverable_breakdown.html">Front-end realization</a></td>
+                  <td><a href="deliverable.html">Front-end realization</a></td>
                   <td>02/03/2021</td>
                   <td>02/04/2021</td>
                   <td>300 $</td>
@@ -118,8 +166,35 @@
                 </tr>
               </tbody>
             </table>
-            
+                <nav aria-label="Page navigation example" class="page_nav">
+                  <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">First</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Last</a></li>
+                  </ul>
+                </nav>
           </main>
+          
+          <div class="side_right">
+            <div>
+              <a href="#" class="d-block">Arrange order</a>
+              <a href="#" class="d-clock">Show milestones</a>
+              
+              <div class="history border p-2 my-3">
+                    <h4>History</h4>
+                    <p><a href="#">Content architecture</a> is created</p>
+                    <p><a href="#">Content architecture</a> is created</p>
+                    <div class="actions d-flex justify-content-end mt-4">
+                      <button class="btn btn-secondary btn-sm me-3">Undo</button>
+                      <button class="btn btn-secondary btn-sm">Redo</button>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
       
     </div>
