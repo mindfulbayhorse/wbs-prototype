@@ -14,8 +14,11 @@
   border: 1px solid  $color
   color: $color
   font-weight: $font-weight
+  border-radius: 5px
+  padding: 5px 10px
+  flex-shrink: 0
   
-form input[type="submit"], form button[type="submit"]
+form input[type="submit"], form button[type="submit"], button
   @include submit-btn(theme.$submit-btn-color, theme.$submit-btn-font-weight)
 
 form input[type="date"]
