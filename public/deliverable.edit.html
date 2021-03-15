@@ -5,90 +5,78 @@
   <meta charset="utf-8"/>
 </head>
 <body>
-  <div class="shortcut">
+    <div class="tagline px-5 d-flex border-bottom align-items-center justify-content-between">
     <div>LOGOTYPE</div>
     <div>Tagline</div>
   </div>
-  <div class="px-5">
-     <nav aria-label="breadcrumb">
-          <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Projects</a></li>
-            <li class="breadcrumb-item"><a href="#">Beadshine</a></li>
-            <li class="breadcrumb-item"><a href="project_wbs.html">WBS</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Front-end realization</li>
-          </ul>
-      </nav>
-        
-      <div class="d-flex justify-content-start">
-        <div class="left_side">
-         <div class="deliverbale new">
-                <h3>New deliverable</h3>
+    <div class="px-5">
+       <div class="dashboard d-flex justify-content-between align-items-center border-bottom">
             
-                <form class="border deliverable p-3 pb-4 me-3">
+            <nav class="w-25">
+              <a href="#" class="">Home</a>
+            </nav>
+            
+            <div class="project w-75 py-2">
+              <div class="summary d-flex justify-content-between align-items-center">
+                  <h3 class="flex-fill me-5 mb-0">Beadshine</h3>
+                  <p class="flex-fill me-5 mb-0 d-flex align-items-end"><span class="me-3 label">Start date:</span>1 January 2021</p>
+                  <p class="flex-fill me-5 mb-0 d-flex align-items-end"><span class="me-3 label">Finish date:</span>31 January 2028</p>
+                  <p class="flex-fill me-5 mb-0 d-flex align-items-end"><span class="me-3 label">Total cost:</span>150000$</p>
+                  <a href="#" class="btn btn-secondary open">Open project</a>
+              </div>
+              
+            </div>
+        </div>
+      <div class="pt-3 d-flex justify-content-between w-100">        
+
+        <div class="part_left">
+          <div class="deliverbale edit">
+             <form class="me-3" action="wbs.html" id="deliverbale_new">
+                <fieldset>
+                <legend>Edit deliverable</legend>
+                  <div class="border p-3 pb-4">
                     <div class="mb-3">
                         <label for="title" 
-                            class="form-label">Title</label>
-                        <input type="email" 
-                            class="form-control" 
-                            id="title">
-                    </div>
-                    
-                    <div class="full_date mb-3">
-                        <label for="startDate" 
-                            class="form-label">Start date</label>
-                    
-                        <div class="field d-flex align-items-end justify-content-between">
-                            <input type="text" 
-                                class="form-control me-3 day" 
-                                id="startDate"
-                                maxlength="2">
-                            <select class="form-select me-3 month">
-                              <option selected value="0">January</option>
-                              <option value="1">February</option>
-                              <option value="2">March</option>
-                              <option value="3">April</option>
-                              <option value="4">May</option>
-                              <option value="5">June</option>
-                              <option value="6">July</option>
-                              <option value="7">August</option>
-                              <option value="8">September</option>
-                              <option value="9">October</option>
-                              <option value="10">November</option>
-                              <option value="11">December</option>
-                            </select>
-                            <input type="text" 
-                                class="form-control year"
-                                maxlength="4">
-                            </div>
-                        </div>
-                    <div class="full_date mb-3">
-                    <div class="field">
-                      <span class="form-label">Finish date</span>
-                      <div class="field d-flex align-items-end justify-content-between">
-                          <input type="text" 
-                            class="form-control me-3 day" 
-                            id="finishDate"
-                            maxlength="2">
-                          <select class="form-select me-3 month">
-                              <option selected value="0">January</option>
-                              <option value="1">February</option>
-                              <option value="2">March</option>
-                              <option value="3">April</option>
-                              <option value="4">May</option>
-                              <option value="5">June</option>
-                              <option value="6">July</option>
-                              <option value="7">August</option>
-                              <option value="8">September</option>
-                              <option value="9">October</option>
-                              <option value="10">November</option>
-                              <option value="11">December</option>
-                          </select>
+                            class="form-label">Title <span class="req">*<span>(required)</span></span></label>
                         <input type="text" 
-                            class="form-control year"
-                            maxlength="4">
-                        </div>
+                            class="form-control" 
+                            id="title"
+                            required aria-required="true"
+                            value="Front-end realization">
                     </div>
+                    
+                    <div class="mb-3">
+                        <label for="startDate"
+                          id="startDateLabel"
+                          tabindex="-1">Start date</label>
+                        <span>
+                            <input type="date" 
+                                class="form-control me-3"
+                                id="startDate"
+                                required aria-required="true"
+                                aria-labelledby="startDateLabel startDateFormat"
+                                value="14/02/2022">
+                            <span class="visually-hidden" 
+                              id="startDateFormat" 
+                              tabindex="-1">DD/MM/YYYY</span>
+                        </span>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="endDate"
+                          id="endDateLabel"
+                          tabindex="-1">End date</label>
+                        <span>
+                            <input type="date" 
+                                class="form-control me-3"
+                                id="endDate"
+                                required aria-required="true"
+                                aria-labelledby="endDateLabel endDateFormat"
+                                value="01/12/2022">
+                            <span class="visually-hidden" 
+                              id="endDateFormat" 
+                              tabindex="-1">DD/MM/YYYY</span>
+                        </span>
                     </div>
                     
                     <div class="field mb-3 w-50">
@@ -96,134 +84,136 @@
                         class="form-label">Cost</label>
                       <input type="text" 
                         class="form-control" 
-                        id="cost">
+                        id="cost"
+                        value="1200">
                     </div>
-                    
-                    <div class="d-flex justify-content-between h-50 align-items-end mb-3">
+                      
                       <div class="form-check mb-3">
                         <input type="checkbox" 
                           class="form-check-input" 
-                          id="finishDate">
+                          id="isMilestone"
+                          checked>
                         <label 
                           class="form-check-label" 
-                          for="finishDate">Package</label>
+                          for="isMilestone">Milestone</label>
                       </div>
-                      <div class="form-check mb-3">
-                        <input type="checkbox" 
-                          class="form-check-input" 
-                          id="finishDate">
-                        <label 
-                          class="form-check-label" 
-                          for="finishDate">Milestone</label>
-                      </div>
-                    </div>
-                        
-                    <div>
-                      <button type="submit" class="btn btn-primary w-75">Add</button>
-                    </div> 
+
+                  </div>
+                  
+                  <div class="mt-3 d-flex justify-content-end">
+                    <button type="submit" class="btn-secondary w-50">Save</button>
+                  </div> 
+                  </fieldset>
                 </form>
+                
             </div>
         </div>
-        <div class="right_side">
-            <h1>Front-end realization</h1>
-            <h2>Breakdown</h2>
-            <form class="row g-0 border deliverable p-3 pb-4">
-              <div class="col-6 pe-4">
-                 <div class="mb-3">
-                    <label for="title" 
-                        class="form-label">Title</label>
-                    <input type="email" 
-                        class="form-control" 
-                        id="title">
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <div class="field  me-4">
-                      <label for="startDate" 
-                        class="form-label">Start date</label>
-                      <input type="text" 
-                        class="form-control" 
-                        id="startDate">
-                    </div>
-                    <div class="field">
-                      <label for="finishDate" 
-                        class="form-label">Finish date</label>
-                      <input type="text" 
-                        class="form-control" 
-                        id="finishDate">
-                    </div>
-                    
-                  </div>
-              </div>
-              <div class="col-3">
-                <div class="d-flex justify-content-between h-50 align-items-end">
-                  <div class="form-check mb-3">
-                    <input type="checkbox" 
-                      class="form-check-input" 
-                      id="finishDate">
-                    <label 
-                      class="form-check-label" 
-                      for="finishDate">Package</label>
-                  </div>
-                  <div class="form-check mb-3">
-                    <input type="checkbox" 
-                      class="form-check-input" 
-                      id="finishDate">
-                    <label 
-                      class="form-check-label" 
-                      for="finishDate">Milestone</label>
-                  </div>
-                </div>
-                <div class="d-flex h-50 justify-content-between align-items-end">
-                    <div class="field">
-                      <label for="cost" 
-                        class="form-label">Cost</label>
-                      <input type="text" 
-                        class="form-control" 
-                        id="cost">
-                    </div>
+        <div class="part_right">
+          <form>
+            <fieldset>
+              
+              <div class="d-flex justify-content-between">
+                <legend>Arrange order</legend>
+                <div class="d-flex justify-content-end">
+                    <button class="me-3">Make first</button>
+                    <button class="me-3">Ascsern</button>
+                    <button class="me-3">Descern</button>
+                    <button>Make last</button>
                 </div>
               </div>
-              <div class="col-3">
-                <div class="h-100 d-flex align-items-end justify-content-end">
-                  <button type="submit" class="btn btn-primary w-75">Save</button>
-                </div> 
-              </div>
-            </form>
-            
-            <table class="table">
+              <table class="table border mt-3">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col"></th>
                   <th scope="col">Title</th>
-                  <th scope="col">Start date</th>
-                  <th scope="col">Finish date</th>
+                  <th scope="col">Start date <small class="fw-normal">(dd/mm/yy)</small></th>
+                  <th scope="col">Finish date <small class="fw-normal">(dd/mm/yy)</small></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td><a href="#">Side quick access blocks</a></td>
-                  <td>12.12.2020</td>
-                  <td>30.12.2021</td>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="1" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Content architecture</a></td>
+                  <td>12/09/2021</td>
+                  <td>30/09/2021</td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
-                  <td><a href="#">Banners slider</a></td>
-                  <td></td>
-                  <td></td>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="2" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Navigation</a></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2"><a href="#">Form submittion</a></td>
-                  <td>30.11.2020</td>
+                 <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="3" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Design</a></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
+                </tr>
+                <tr>
+                   <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="4" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="deliverable_breakdown.html">Front-end realization</a></td>
+                  <td>02/03/2021</td>
+                  <td>02/04/2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="3" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Design for different devices</a></td>
+                  <td>18/03/2021</td>
+                  <td>18/04/2021</td>
                 </tr>
               </tbody>
             </table>
-        </div>
+            <nav aria-label="Page navigation example" class="page_nav">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">First</a></li>
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link" href="#">Last</a></li>
+              </ul>
+            </nav>
+            </fieldset>
+          </form>
       </div>
-
   </div>
- 
-  <script src="AJAXHTTP.js"></script>
+</div>
+ <script src="AJAXHTTP.js"></script>
 </body>
 </html>
