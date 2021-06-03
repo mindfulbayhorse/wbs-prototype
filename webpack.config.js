@@ -17,19 +17,24 @@ module.exports = {
     moduleIds: 'deterministic',
   },
   plugins: [
-      new MiniCssExtractPlugin({
-        filename: '[name].[hash].css',
-        chunkFilename: '[id].css',
-      }),
-      new CleaningOldFiles()
-      ],
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].css',
+    }),
+    new CleaningOldFiles()
+  ],
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            }
+          },
           'css-loader',
           {
             loader: 'postcss-loader', // Run postcss actions
