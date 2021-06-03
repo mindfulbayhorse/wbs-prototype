@@ -1,5 +1,11 @@
-export class Deliverable extends React.component { 
+let React = require('react');
+
+export class Deliverable extends React.Component { 
   render(){
-    return (<input value="this.props.value"/>);
+    
+    return (
+      <tr>
+        <td>{this.props.title}</td>
+      </tr>);
   }
 }
