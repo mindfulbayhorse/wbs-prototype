@@ -1,12 +1,12 @@
-export class Table extends React.component { 
+let React = require('react');
+import {WBS} from './wbs.js';
+
+export class Table extends React.Component {
+  
   render(){
     return (
       <table>
-        <tbody>
-          <tr>
-            <td></td>
-          </tr>
-        </tbody>
+        <WBS />
       </table>
     );
   }
