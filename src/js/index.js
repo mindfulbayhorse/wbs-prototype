@@ -18,8 +18,8 @@ for (let calendar of calendars) {
   calendar.appendChild(datePicker.widget);
 }
 
-//import {Table} from '../js/wbs-widget/components/table.js';
-import {Deliverable} from '../js/wbs-widget/components/deliverable.js';
+import {WBS} from '../js/wbs-widget/components/wbs.js';
+/*import {Deliverable} from '../js/wbs-widget/components/deliverable.js';
 
 function WBS(props){
   
@@ -33,11 +33,17 @@ function WBS(props){
       {listItems}
     </tbody>
   );
-}
+}*/
 
 const deliverables = [
+        {id: '1', title: "Content"},
+        {id: '2', title: "Design"},
+        {id: '3', title: "Development"},
+    ];
+    
+/*const deliverables = [
     "Content", "Design", "Development"
-  ];
+  ];*/
   
 ReactDOM.render(
   <table><WBS wbs = {deliverables}/></table>,

@@ -2,28 +2,24 @@ let React = require('react');
 
 import {Deliverable} from './deliverable.js';
 
-
-
 export class WBS extends React.Component {
   
   constructor(props) {
     super(props);
-    this.rows = testDeliverables();
-  }
-  
-  renderDeliverable(title){
-    return (<Deliverable title={title} />);
+    this.deliverables = props.wbs;
+    console.log(this.deliverables);
   }
   
   renderDeliverableList(){
 
-    let bodyRows = this.rows.map(element => 
-          this.renderDeliverable(element)
-        );
-  
+    const listItems = this.deliverables.map((element) =>
+      { return (<Deliverable key={element.id} title={element.title} />); }
+    );
     return (
-      <tbody>{bodyRows}</tbody>
-      );
+      <tbody>
+        {listItems}
+      </tbody>
+    );
   }
   
   render() {
