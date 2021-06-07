@@ -1,6 +1,6 @@
-import 'bootstrap';
-import '../sass/input.sass';
 import '../scss/input.scss';
+import '../sass/input.sass';
+
 
 let React = require('react');
 let ReactDOM = require('react-dom');
