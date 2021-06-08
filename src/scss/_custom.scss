@@ -31,6 +31,8 @@ $headings-font-weight:  700;
 
 $input-btn-line-height: 1;
 
+$btn-white-space: nowrap;
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
