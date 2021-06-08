@@ -1,5 +1,15 @@
 @use "theme"
 
+h2 
+  .wbs &
+    font-size: 16px
+    font-weight: bold
+
+h1 
+ .wbs &
+    font-weight: bold
+    font-size: 16px
+
 .wbs 
   .btn-new
     @extend .btn-simple
@@ -13,9 +23,6 @@
   
   &.summary
     padding: 15px
-    
-    h3
-      padding: 0px 0px 5px
       
     .indicator
       .title
@@ -26,4 +33,24 @@
       
       .btn
         width: 45%
+        
+        
+table
+
+  td, th
+    font-size: 14px
+    
+  th
+    color: theme.$title-color
+
+  td
+    font-weight: bold
+    color: rgb(005, 005, 005)
+    
+    &.cost
+      text-align: right
+      
+    &.title
+      min-width: 250px
+        
       
