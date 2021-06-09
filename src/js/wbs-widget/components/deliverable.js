@@ -5,7 +5,7 @@ export class Deliverable extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      'title': ''
+      value: props.title
     }
   }
   render(){
@@ -13,8 +13,8 @@ export class Deliverable extends React.Component {
     return (
       <tr>
         <td><input title={this.props.title} 
-          value={this.props.title} 
-          onChange={()=>{this.setState({'title': event.target.value})}} /></td>
+          value={this.state.value} 
+          onChange={()=>{this.setState({'value': event.target.value})}} /></td>
       </tr>);
   }
 }
