@@ -118,35 +118,108 @@
             <a href="deliverable.html" class="d-block"><< Front-end realization</a>
           </nav>
             <h1>Work breakdown structure</h1>
-            <table class="table">
+            <form>
+            <fieldset>
+              
+              <div class="d-flex justify-content-between">
+                <legend>Arrange order</legend>
+                <div class="d-flex justify-content-end">
+                    <button class="me-3">Make first</button>
+                    <button class="me-3">Ascern</button>
+                    <button class="me-3">Descern</button>
+                    <button>Make last</button>
+                </div>
+              </div>
+              <table class="table border mt-3">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col"></th>
                   <th scope="col">Title</th>
-                  <th scope="col">Start date</th>
-                  <th scope="col">Finish date</th>
+                  <th scope="col">Start date <small class="fw-normal">(dd/mm/yy)</small></th>
+                  <th scope="col">Finish date <small class="fw-normal">(dd/mm/yy)</small></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td><a href="#">Side quick access blocks</a></td>
-                  <td>12.12.2020</td>
-                  <td>30.12.2021</td>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="1" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Content architecture</a></td>
+                  <td>12/09/2021</td>
+                  <td>30/09/2021</td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
-                  <td><a href="#">Banners slider</a></td>
-                  <td></td>
-                  <td></td>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="2" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Navigation</a></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2"><a href="#">Form submittion</a></td>
-                  <td>30.11.2020</td>
+                 <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="3" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Design</a></td>
+                  <td>12/02/2021</td>
+                  <td>12/03/2021</td>
+                </tr>
+                <tr>
+                   <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="4" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="deliverable_breakdown.html">Front-end realization</a></td>
+                  <td>02/03/2021</td>
+                  <td>02/04/2021</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="form-check-input" 
+                        type="radio" 
+                        value="3" 
+                        aria-label="..."
+                        name="order"
+                        form="deliverbale_new" />
+                  </td>
+                  <td><a href="#">Design for different devices</a></td>
+                  <td>18/03/2021</td>
+                  <td>18/04/2021</td>
                 </tr>
               </tbody>
             </table>
+            <nav aria-label="Page navigation example" class="page_nav">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">First</a></li>
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link" href="#">Last</a></li>
+              </ul>
+            </nav>
+            </fieldset>
+          </form>
         </div>
       </div>
 
