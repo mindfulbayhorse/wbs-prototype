@@ -50,6 +50,11 @@ $btn-white-space: nowrap;
 $summary-text-color: rgba(196,41,41,1);
 $current-text-color: rgba(224,31,31,1);
 
+
+h1 {
+  color: rgb(24, 73, 21)
+}
+    
 h3{
   color: $summary-text-color;
   font-weight: 600;
