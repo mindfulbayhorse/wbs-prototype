@@ -1,3 +1,6 @@
 [submodule "src/calendar"]
 	path = src/calendar
 	url = git@github.com:mindfulbayhorse/calendar.git
+[submodule "src/js/cleaning-cached-files"]
+	path = src/js/cleaning-cached-files
+	url = git@github.com:mindfulbayhorse/cleaning-cached-files.git
