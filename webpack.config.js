@@ -1,6 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleaningOldFiles = require("./src/js/cleaning-cached-files");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -8,20 +8,45 @@ module.exports = {
     main: './src/js/index.js',
     vendor: ['bootstrap']
   },
+  devtool: 'inline-source-map',
+  devServer: {
+    static: './public',
+  },
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'public'),
+    clean: true,
+    assetModuleFilename: "[name][ext]",
   },
-  optimization: {
-    minimize: true,
+   optimization: {
     moduleIds: 'deterministic',
-  },
+     runtimeChunk: 'single',
+   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].css',
     }),
-    new CleaningOldFiles()
+    new HtmlWebpackPlugin({
+      title: 'Project work breakdown structure (empty)',
+      filename: 'index.html',
+      template: 'src/assets/templates/wbs.first.html'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Project work breakdown structure',
+      filename: 'wbs.html',
+      template: 'src/assets/templates/wbs.html'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Deliverable | Front-end realization',
+      filename: 'deliverable.html',
+      template: 'src/assets/templates/deliverable.html'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Edit deliverable | Front-end realization',
+      filename: 'edit-deliverable.html',
+      template: 'src/assets/templates/deliverable.edit.html'
+    })
   ],
   module: {
     rules: [
@@ -79,7 +104,7 @@ module.exports = {
             plugins: ["@babel/plugin-proposal-class-properties"]
           }
         }
-      }
+      },
     ],
   },
 };
