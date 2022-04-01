@@ -19,8 +19,8 @@ for (let calendar of calendars) {
   calendar.appendChild(datePicker.widget);
 }
 
-/*
-React models example
+
+//React models example
 
 import {WBS} from '../js/wbs-widget/components/wbs.js';
 
@@ -35,4 +35,3 @@ ReactDOM.render(
   <table><WBS wbs = {deliverables}/></table>,
   document.getElementById('root')
 );
-*/
