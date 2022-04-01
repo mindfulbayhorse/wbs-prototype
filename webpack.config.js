@@ -1,13 +1,16 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  watch: true,
   entry: {
     main: './src/js/index.js',
     vendor: ['bootstrap']
   },
+  target: 'web',
   devtool: 'inline-source-map',
   devServer: {
     static: './public',
@@ -19,8 +22,8 @@ module.exports = {
     assetModuleFilename: "[name][ext]",
   },
    optimization: {
-    moduleIds: 'deterministic',
-     runtimeChunk: 'single',
+      moduleIds: 'deterministic',
+      runtimeChunk: 'single',
    },
   plugins: [
     new MiniCssExtractPlugin({
@@ -46,7 +49,17 @@ module.exports = {
       title: 'Edit deliverable | Front-end realization',
       filename: 'edit-deliverable.html',
       template: 'src/assets/templates/deliverable.edit.html'
-    })
+    }),
+     new BrowserSyncPlugin({
+      server: {
+          baseDir: "public",
+          serveStaticOptions: {
+              extensions: ["html"]
+          }
+      },
+      host: 'wbs-prototype.com',
+      https: true
+    }),
   ],
   module: {
     rules: [
@@ -64,10 +77,13 @@ module.exports = {
           {
             loader: 'postcss-loader', // Run postcss actions
             options: {
-              plugins: function() { // postcss plugins, can be exported to postcss.config.js
-                return [
-                  require('autoprefixer')
-                ];
+              postcssOptions: {
+                plugins: function() {
+                   // postcss plugins, can be exported to postcss.config.js
+                  return [
+                    require('autoprefixer')
+                  ];
+                }
               }
             }
           },
@@ -79,7 +95,7 @@ module.exports = {
                 const { resourcePath, rootContext } = loaderContext;
                 const relativePath = path.relative(rootContext, resourcePath);
 
-                if (relativePath === 'src/sass/input.sass') {
+                if (relativePath === 'src/sass') {
                   return {
                     indentWidth: 2,
                     includePaths: ['./src/sass/input.sass'],
